@@ -1,0 +1,13 @@
+name: Release Workflow
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  forged:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "forged upstream run head_ref=$GITHUB_HEAD_REF ref=$GITHUB_REF"
